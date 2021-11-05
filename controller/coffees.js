@@ -28,9 +28,17 @@ function update(req, res){
     })
 }
 
+function deleteDrink(req, res){
+  Coffee.findByIdAndDelete(req.params.id)
+  .then(coffee => {
+    res.json(coffee)
+  })
+}
+
 export{
   index,
   show,
   create,
-  update
+  update,
+  deleteDrink as delete
 }

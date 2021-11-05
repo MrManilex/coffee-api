@@ -11,6 +11,8 @@ router.post('/coffees', coffeesCtrl.create)
 
 router.put('/coffees/:id', coffeesCtrl.update)
 
+router.delete('/coffees/:id', coffeesCtrl.delete)
+
 export {
   router
 }
