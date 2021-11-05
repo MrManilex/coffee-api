@@ -7,6 +7,22 @@ function index(req, res){
     })
 }
 
+function show(req, res){
+  Coffee.findById(req.params.id)
+    .then(coffee => {
+      res.json(coffee)
+    })
+}
+
+function create(req, res){
+  Coffee.create(req.body)
+    .then(coffee => {
+      res.json(coffee)
+    })
+}
+
 export{
-  index
+  index,
+  show,
+  create
 }
