@@ -9,6 +9,8 @@ router.get('/coffees/:id', coffeesCtrl.show)
 
 router.post('/coffees', coffeesCtrl.create)
 
+router.put('/coffees/:id', coffeesCtrl.update)
+
 export {
   router
 }

@@ -21,8 +21,16 @@ function create(req, res){
     })
 }
 
+function update(req, res){
+  Coffee.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then((coffee) => {
+      res.json(coffee)
+    })
+}
+
 export{
   index,
   show,
-  create
+  create,
+  update
 }
